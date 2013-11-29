@@ -6,7 +6,7 @@ body {
   background: $darkgrey url(../assets/curtains.jpg) no-repeat 0px 0;
   &.home { 
     background: $darkgrey url(../assets/curtains.jpg) no-repeat top center;
-   }  
+  }  
   padding: 0;
   margin: 0;
   /* the following line fixes a blink in chrome https://code.google.com/p/chromium/issues/detail?id=108025 */
