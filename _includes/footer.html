@@ -1,0 +1,15 @@
+		<footer>
+			A game in development by <a href="http://xalking.com">Alexa</a> + <a href="http://etiquettestudio.com/">Nick</a> + <a href="http://rampantcinephile.wordpress.com/">Michaela</a>
+			<nav>
+				<ul>
+					<!-- <li><a href="http://twitter.com/@cabaretnoirgame">@CabaretNoirGame</a></li> -->
+					
+					{% for post in site.tags.mainnav or page.title contains "Blog" %}
+		               <li {% if page.title == post.title %}class="active"{% endif %}><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+	                {% endfor %}
+				</ul>
+			</nav>
+		</footer>
+
+	</body>
+</html>

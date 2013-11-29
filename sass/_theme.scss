@@ -1,0 +1,106 @@
+$white: #fff;
+$darkgrey: #0c0c0c;
+
+body {
+  color: #999;
+  background: $darkgrey url(../assets/curtains.jpg) no-repeat 0px 0;
+  &.home { 
+    background: $darkgrey url(../assets/curtains.jpg) no-repeat top center;
+   }  
+  padding: 0;
+  margin: 0;
+  /* the following line fixes a blink in chrome https://code.google.com/p/chromium/issues/detail?id=108025 */
+  -webkit-backface-visibility: hidden;
+  .homepage {
+    text-align: center;
+    display: block;
+    margin: 0 1em;
+    padding: 198px 0 198px;
+    img {
+      display: inline-block;
+    }
+  }
+}
+
+//Links
+a {
+  -webkit-transition: color .5s ease-out;
+  -moz-transition: color .5s ease-out;
+  -o-transition: color .5s ease-out;
+  transition: color .5s ease-out; 
+
+  &:link, &:visited {
+    color: #999;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
+nav {
+    text-align: center;
+    @include at-breakpoint($tablet){
+    
+      font-size: .875em;
+    }
+    @include at-breakpoint($computer){
+      font-size: 1em;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        list-style: none;
+        a {
+          padding: .5em 1em;
+          display: inline-block;
+          text-decoration: none;
+
+        }
+        
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+  }
+
+//Responsive Images
+img {
+  border: 0;
+  vertical-align: middle;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  margin: 2em 0 1em;
+}

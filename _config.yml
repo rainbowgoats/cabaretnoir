@@ -1,3 +1,7 @@
 name: Cabaret Noir
 markdown: redcarpet
 pygments: true
+
+permalink: :categories/:title
+description: A Murder Mystery in 4 Acts
+safe: true

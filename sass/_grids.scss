@@ -1,0 +1,62 @@
+$total-columns: 12; 
+$column-width: 3em; 
+$gutter-width: 3em; 
+$grid-padding: 2em;
+$container-style: magic;
+
+$tablet:8;
+$computer:55em 12;
+
+section, footer, header {
+  margin: 1em;
+  @include at-breakpoint($tablet){
+    margin: 6em;
+  }
+}
+
+.container {
+  @include container;
+}
+
+@include at-breakpoint($tablet){
+  .col1 {
+      @include span-columns(1,12);
+  }
+  .col2 {
+      @include span-columns(2,12);
+  }
+  .col3 {
+      @include span-columns(3,12);   
+  }
+  .col4 {
+      @include span-columns(4,12);   
+  }
+  .col5 {
+      @include span-columns(5,12);   
+  }
+  .col6 {
+    @include span-columns(6,12);
+  }
+  .col7 {
+    @include span-columns(7,12);
+  }
+  .col8 {
+      @include span-columns(8,12);
+  }
+  .col9 {
+      @include span-columns(9,12);
+  }
+  .col10 {
+      @include span-columns(10,12);
+  }
+  .col11 {
+      @include span-columns(11,12);
+  }
+  .col12 {
+      @include span-columns(12,12);
+  }
+  .side {
+    @include omega; 
+  }
+}
+
